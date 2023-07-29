@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href=""
+        rel=""
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Youtube mobile</title>
+    <script src="https://kit.fontawesome.com/23033f2e9b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+
+    <!--video player-->
+    <section class="player">
+        <video controls src="C:\Users\조윤희\Youtube clone coding\video\jjangu.mp4"></video>
+    </section>
+
+    <!--평소에는 column형식으로 오다가 화면이 늘어나는 순간 felxdirection은 row로 줘야함-->
+    <div class="infoandupnext">
+        <!--video info-->
+    <section class="info">
+        <!--metadata-->
+        <div class="metadata">
+            <ul class="hashtags">
+                <li>#짱구</li>
+                <li>#흰둥이</li>
+                <li>#짱구는 못말려</li>
+            </ul>
+            <div class="titleandbutton">
+                <span class="title">
+                    [짱구는못말려] 짱구와 짱아의 눈빛공격 feat 대게 (귀욤)... 천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루
+                    우리의 짱구는 정말 못말려 짱구야. 짖굳은 장난은 나에게 맡기세요. 이 세상 누구보다 자신이 있다구요
+                </span>
+                <button class="morebtn">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+            <span class="views">1M views 1 month ago</span>
+        </div>
+        <!--Actions-->
+        <ul class="actions">
+             <li><button><i class="active fas fa-thumbs-up"></i><span>1k</span></button></li>
+             <li><button><i class="fas fa-thumbs-down"></i><span>0</span></button></li>
+             <li><button><i class="fas fa-share"></i><span>Share</span></button></li>
+             <li><button><i class="fas fa-plus"></i><span>Save</span></button></li>
+             <li><button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button></li>   
+        </ul>
+        <!--channel descriptions-->
+        <div class="channel">
+            <div class="metadata">
+                <img src="C:\Users\조윤희\Youtube clone coding\img\4.jpg" alt="">
+                <div class="info">
+                    <span class="name">드림코딩</span>
+                    <span class="subscribers">1M subscribers</span>
+                </div>
+            </div>
+            <button class="subscribe">subscribe</button>
+        </div>
+    </section>
+    <!--upnext-->
+    <section class="upnext">
+        <span class="title">Up next</span>
+        <ul>
+            <li class="item">
+                <div class="img">
+                    <img src="C:\Users\조윤희\Youtube clone coding\img\3.webp" alt="">
+                </div>
+                <div class="info">
+                    <span class="title">프론트엔드 개발자라면 필수로 알아야 하는 브라우저 101 필수 개념과 게임 프로</span>
+                    <span class="name">드림코딩</span>
+                    <span class="views">조회수 3.9만회</span>
+                </div>
+                <button class="morebtn"><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+            <li class="item">
+                <div class="img">
+                    <img src="C:\Users\조윤희\Youtube clone coding\img\1.webp" alt="">
+                </div>
+                <div class="info">
+                    <span class="title">
+                        API란? 개념 정리와 포트폴리오에 유용한 대박 사이트 공유 </span>
+                    <span class="name">드림코딩</span>
+                    <span class="views">조회수 10만회</span>
+                </div>
+                <button class="morebtn"><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+            <li class="item">
+                <div class="img">
+                    <img src="C:\Users\조윤희\Youtube clone coding\img\2.webp" alt="">
+                </div>
+                <div class="info">
+                    <span class="title">
+                        CSS Flexbox 완전 정리. 포트폴리오 만드는 날까지! | 프론트엔드 개발자 입문편</span>
+                    <span class="name">드림코딩</span>
+                    <span class="views">조회수 17만회</span>
+                </div>
+                <button class="morebtn"><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+        </ul>
+    </section>
+    </div>
+</body>
+</html>

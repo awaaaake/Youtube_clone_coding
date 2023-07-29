@@ -1,0 +1,250 @@
+:root {
+    /*color*/
+    --white-color:#fff;
+    --black-color:#140a00;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --grey-dark-color:#909090;
+    --grey-light-color:#e0e0e0;
+    
+    /*size*/
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /*font size*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro:10px
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:var(--padding);
+    background-color: var(--black-color);
+    color:var(--white-color);   
+}
+
+header .logo{
+    font-size:var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+
+
+/*video*/
+/*비디오 아이템을 반응형으로!*/
+.player{
+    position: sticky;
+    top:0;
+    text-align:center;
+    background-color: #140a00;
+}
+
+/*video info*/
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+.info{
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags{
+    display:flex;
+    font-size: var(--font-small);
+    color:var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleandbutton{
+    display:flex;
+}
+
+.info .metadata .titleandbutton .title{
+    font-size: var(--font-medium);
+    /*title이 2줄로만 보이도록*/
+    display:-webkit-box;
+    --webkit-box-orient: vertical;
+    --webkit-line-clamp:2;
+    overflow: hidden;
+    /**/
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleandbutton .morebtn {
+    height: 100%;
+}
+
+.info .views{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+/*action buttons*/
+.info .actions {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+    color: var(--grey-dark-color);
+}
+
+.info .actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+}
+
+.info .actions button i{
+    margin: 0 auto; /*아이콘들이 중간에 위치함*/
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.info .action button i.active {
+    color: var(--blue-color);
+}
+
+
+/*channel description*/
+.info .channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.info .channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.info .channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+.info .channel .metadata img{
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.info .channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.info .channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+
+/*up next*/
+.upnext{
+    padding: var(--padding); 
+}
+.upnext > .title{
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+
+.upnext .item {
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.upnext .item .img{ /*반응형으로 만들기위해서는 img를 박스안에 넣어야함*/
+   flex: 1 1 35%; /*줄어들거나 늘어날때는 1로 지정, basis는 35%*/
+    margin-right: var(--padding);
+}
+
+.upnext .item .img img {
+    width: 100%
+}
+.upnext .item .info{
+    flex: 1 1 60%;
+}
+
+.upnext .item .morebtn{
+    flex: 1 1 5%;
+}
+
+.upnext .item .info {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.upnext .item .title {
+    font-size: var(--font-small);
+}
+
+.upnext .item .name,
+.upnext .item .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+
+/*반응형*/
+/*평소때*/
+.infoandupnext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .infoandupnext {
+        flex-direction: row;
+        margin: var(--padding);
+    }
+}
+
+/* 
+반응형 웹
+1. 화면크기가 줄거나 늘어날때 비디오의 width와 height를 100%로 지정해놓고, max-width를 1000px로 지정해서 
+화면이 더 커졌을때, 1000px은 넘어가지 않도록 크기 설정
+2. 태그들이나 아이콘 버튼들을 flex속성을 준다음에 화면너비가 변할때도 이 요소들사이의 간격을 일정하게 유지하면서 변하도록 설정
+3.크게  info 섹션과 다른 동영상들을 미리보기하는 섹션으로 2개로 나누고, 그 섹션들의 부모로 div태그로 감싸고, 그 부모태그에다가 flex 속성을 주고 flex-direction을 column; 으로 기본값을 설정 -> 두 섹션이 한 열에 배치되도록
+미디어 쿼리를 써서 min-width: 768px 이상일 때 flex-direction: row;로 설정하여 두 섹션이 한 행에 배치되도록
+*/
